@@ -1,10 +1,6 @@
-
 import java.text.NumberFormat;
 import java.util.Scanner;
 
-
-// Press Shift twice to open the Search Everywhere dialog and type `show whitespaces`,
-// then press Enter. You can now see whitespace characters in your code.
 public class Main {
     public static void main(String[] args) throws IllegalArgumentException {
         Scanner in = new Scanner(System.in);
@@ -77,11 +73,9 @@ public class Main {
     enum RomanNum {
         I(1), II(2), III(3), IV(4), V(5), VI(6), VII(7), VIII(8), IX(9), X(10), XL(40), L(50), XC(90), C(100);
         final int key;
-
         RomanNum(int key) {
             this.key = key;
         }
-
         int getKey() {
             return key;
         }
@@ -110,13 +104,10 @@ public class Main {
             return romanNumber >= 90 ? ("XC" + converterIntegerToRoman(romanNumber - 90)) : ("L" + converterIntegerToRoman(romanNumber - 50));
         if (romanNumber >= 10)
             return romanNumber >= 40 ? ("XL" + converterIntegerToRoman(romanNumber - 40)) : ("X" + converterIntegerToRoman(romanNumber - 10));
-
         if (romanNumber >= 5)
             return romanNumber == 9 ? "IX" : "V" + converterIntegerToRoman(romanNumber - 5);
-
         if (romanNumber > 0)
             return romanNumber == 4 ? "IV" : "I" + converterIntegerToRoman(romanNumber - 1);
-
         return "";
     }
 }
